@@ -1,0 +1,28 @@
+.bg-my-1{
+  background: #4D4D4D;
+}
+.bg-my-2{
+  background: #333333;
+}
+.text-my{
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.text-my:hover{
+  color: #4D4D4D;
+}
+.active-my{
+  color: #FFFFFF;
+  background: #333333;
+}
+li{
+  cursor: pointer;
+}
+li:hover{
+  color: #FFFFFF;
+  background: #333333;
+}
+img{
+  border: 5px solid #4D4D4D;
+  width:40%;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!--Google Icon-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!--Bootstrap 5.2.2-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <!--Jquery-->
+  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/flick/jquery-ui.css">
+
+  <!--meu css-->
+  <link rel="stylesheet" href="css/audio-player.css">
+
+  <title>Reprodutor || Tchano PY</title>
+</head>
+<body>
+
+<div class="container text-center">
+  <div class="row justify-content-md-center">
+    <div class="col col-md-2"></div>
+
+    <div class="col col-md-8">
+      <section class="p-3">
+        <div class="mx-0">
+          <div class="card-body bg-my-2">
+
+            <nav class="navbar navbar-dark bg-my-1">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#">Tchano<strong>PY</strong></a> 
+                <button class="navbar-toggler" type="button" style="border: none;">
+                  <span class="material-icons">more_vert</span>
+                </button>
+              </div>
+            </nav>
+
+            <img src="img/logo_transparent.png" id="thumbnail" class="rounded-circle mt-5" alt="Logo">
+
+              <div class="row justify-content-md-center mb-4 mt-4">
+                <div class="col col-lg-2">
+                  <i id="skip-button" class="material-icons text-my ml-2 mr-3">skip_previous</i>
+                </div>
+                <div class="col-md-auto">
+                  <i id="play-button" class="material-icons play-pause text-my mr-2" aria-hidden="true">play_circle_outline</i>
+                  <i id="pause-button"class="material-icons play-pause d-none text-my mr-2" aria-hidden="true">pause_circle_outline</i>
+                </div>
+                <div class="col col-lg-2">
+                  <i id="next-button"class="material-icons text-my ml-2 mr-3" aria-hidden="true">skip_next</i>
+                </div>
+              </div>
+                            
+            
+            <div class="p-0 m-0" id="now-playing">
+              <p class="lead text-my" id="title"></p>
+            </div>
+
+            <div class="progress-bar col-12 mb-1" style="background: #4D4D4D; border:none;"></div>
+          </div>
+          <ul class="playlist list-group list-group-flush">
+            <li audio_url="Nenny-Aura/1 Nenny - Vision.mp3"
+            img_url="Nenny-Aura/Cover.jpg"
+            class="active-my list-group-item playlist-item ">1 Nenny - Vision</li>
+
+            <li audio_url="Nenny-Aura/2 Nenny - +351 (Call me).mp3"
+            img_url="Nenny-Aura/Cover.jpg"
+            class="list-group-item playlist-item">2 Nenny - +351 (Call me)</li>
+
+            <li audio_url="Nenny-Aura/3 Nenny - Sushi.mp3"
+            img_url="Nenny-Aura/Cover.jpg"
+            class="list-group-item playlist-item">3 Nenny - Sushi</li>
+
+            <li audio_url="Nenny-Aura/4 Nenny - Look At Me.mp3"
+            img_url="Nenny-Aura/Cover.jpg"
+            class="list-group-item playlist-item">4 Nenny - Look At Me</li>
+
+            <li audio_url="Nenny-Aura/5 Nenny - ON YOU.mp3"
+            img_url="Nenny-Aura/Cover.jpg"
+            class="list-group-item playlist-item">5 Nenny - ON YOU</li>
+
+            <li audio_url="Nenny-Aura/6 Nenny - Lion.mp3"
+            img_url="Nenny-Aura/Cover.jpg"
+            class="list-group-item playlist-item">6 Nenny - Lion</li>
+
+            <li audio_url="Nenny-Aura/7 Nenny - 21.mp3"
+            img_url="Nenny-Aura/Cover.jpg"
+            class="list-group-item playlist-item">7 Nenny - 21</li>
+
+            <li audio_url="Nenny-Aura/8 Nenny - Bússola.mp3"
+            img_url="Nenny-Aura/Cover.jpg"
+            class="list-group-item playlist-item">8 Nenny - Bússola</li>
+
+            <li audio_url="Nenny-Aura/9 Nenny - Dona Maria.mp3"
+            img_url="Nenny-Aura/Cover.jpg"
+            class="list-group-item playlist-item">9 Nenny - Dona Maria</li>
+           
+          </ul>
+      </div>
+      <audio id="audio-player" class="d-none" src="" type="audio/mp3" controls="controls"></audio>
+    </section>
+    </div>
+
+    <div class="col col-md-2"></div>
+  </div>
+</div>
+
+  
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
+<script src="js/jquery-ui-slider.js" charset="utf-8"></script>
+<script src="js/audioPlayer.js" charset="utf-8"></script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
